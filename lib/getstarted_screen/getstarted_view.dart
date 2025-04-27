@@ -1,3 +1,4 @@
+import 'package:fitflow/app/app.router.dart';
 import 'package:fitflow/assets/colors.dart';
 import 'package:fitflow/assets/fonts.dart';
 import 'package:fitflow/assets/images.dart';
@@ -62,7 +63,7 @@ class GetstartedView extends StatelessWidget {
                     padding: const EdgeInsets.symmetric(vertical: 16),
                     child: ElevatedButton(
                       onPressed: () {
-                    
+                        viewModel.navigationService.replaceWithHomeView();
                       },
                       style: ButtonStyle(
                         backgroundColor: WidgetStateProperty.all(AppColors.primary),
