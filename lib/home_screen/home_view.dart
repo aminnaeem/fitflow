@@ -18,18 +18,21 @@ class HomeView extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
-                  "Login",
-                  style: TextStyle(
-                    color: AppColors.primary,
-                    fontFamily: AppFonts.inter,
-                    fontSize: 20,
-                    fontWeight: FontWeight.w600
-                  ),
-                ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
+                    Text(
+                      "Login",
+                      style: TextStyle(
+                        color: AppColors.primary,
+                        fontFamily: AppFonts.inter,
+                        fontSize: 20,
+                        fontWeight: FontWeight.w600
+                      ),
+                    ),
+                    SizedBox(
+                      width: 4
+                    ),
                     Text(
                       "Don't have Account? ",
                       style: TextStyle(
