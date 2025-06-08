@@ -1,5 +1,6 @@
 import 'package:fitflow/assets/colors.dart';
 import 'package:fitflow/assets/fonts.dart';
+import 'package:fitflow/assets/images.dart';
 import 'package:fitflow/home_screen/home_viewmodel.dart';
 import 'package:fitflow/widgets/headings.dart';
 import 'package:fitflow/widgets/popular_workouts.dart';
@@ -102,16 +103,26 @@ class HomeView extends StatelessWidget {
                           height: 140,
                           width: MediaQuery.sizeOf(context).width*0.9,
                           decoration: BoxDecoration(
-                            color: AppColors.secondary,
+                            image: DecorationImage(
+                              image: WebImages.myPlan,
+                              fit: BoxFit.cover
+                            ),
                             borderRadius: BorderRadius.circular(16)
                           ),
                           child: Text(
-                            "Tap to design your daily plan",
+                            "Design your\nDaily plan",
                             style: TextStyle(
-                              color: AppColors.background,
+                              color: AppColors.primary,
                               fontFamily: AppFonts.inter,
-                              fontSize: 18,
-                              fontWeight: FontWeight.w800
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold,
+                              shadows: [
+                                Shadow(
+                                  offset: Offset(1.5, 1.5),
+                                  blurRadius: 3,
+                                  color: Color.fromRGBO(0, 0, 0, 0.5),
+                                ),
+                              ],
                             ),
                             textAlign: TextAlign.center,
                           ),
