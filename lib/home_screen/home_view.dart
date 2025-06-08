@@ -1,9 +1,9 @@
 import 'package:fitflow/assets/colors.dart';
 import 'package:fitflow/assets/fonts.dart';
 import 'package:fitflow/home_screen/home_viewmodel.dart';
+import 'package:fitflow/widgets/headings.dart';
 import 'package:fitflow/widgets/popular_workouts.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:stacked/stacked.dart';
 
 class HomeView extends StatelessWidget {
@@ -78,18 +78,7 @@ class HomeView extends StatelessWidget {
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 16),
-                      child: Text(
-                        "Popular Workouts",
-                        style: TextStyle(
-                          color: AppColors.text,
-                          fontSize: 14,
-                          fontWeight: FontWeight.w600,
-                          fontFamily: AppFonts.inter
-                        ),
-                      ),
-                    ),
+                    Headings(heading: "Popular Workouts"),
                     SizedBox(
                       height: 156,
                       child: ListView.builder(
@@ -104,18 +93,7 @@ class HomeView extends StatelessWidget {
                         }
                       ),
                     ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 16),
-                      child: Text(
-                        "Today Plan",
-                        style: TextStyle(
-                          color: AppColors.text,
-                          fontSize: 14,
-                          fontWeight: FontWeight.w600,
-                          fontFamily: AppFonts.inter
-                        ),
-                      ),
-                    ),
+                    Headings(heading: "Today Plan"),
                     Padding(
                       padding: const EdgeInsets.symmetric(vertical: 8),
                       child: Center(
@@ -139,7 +117,8 @@ class HomeView extends StatelessWidget {
                           ),
                         ),
                       ),
-                    )
+                    ),
+                    Headings(heading: "Exercise Programs"),
                   ],
                 )
               ],
@@ -150,4 +129,5 @@ class HomeView extends StatelessWidget {
     );
   }
 }
+
 
