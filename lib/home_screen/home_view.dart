@@ -78,10 +78,68 @@ class HomeView extends StatelessWidget {
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
-                      "Popular Workouts"
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 16),
+                      child: Text(
+                        "Popular Workouts",
+                        style: TextStyle(
+                          color: AppColors.text,
+                          fontSize: 14,
+                          fontWeight: FontWeight.w600,
+                          fontFamily: AppFonts.inter
+                        ),
+                      ),
                     ),
-                    PopularWorkouts()
+                    SizedBox(
+                      height: 156,
+                      child: ListView.builder(
+                        scrollDirection: Axis.horizontal,
+                        itemCount: 2,
+                        itemBuilder: (context, index) {
+                          return Row(
+                            children: [
+                              PopularWorkouts()
+                            ],
+                          );
+                        }
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 16),
+                      child: Text(
+                        "Today Plan",
+                        style: TextStyle(
+                          color: AppColors.text,
+                          fontSize: 14,
+                          fontWeight: FontWeight.w600,
+                          fontFamily: AppFonts.inter
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 8),
+                      child: Center(
+                        child: Container(
+                          alignment: Alignment.center,
+                          height: 140,
+                          width: MediaQuery.sizeOf(context).width*0.9,
+                          decoration: BoxDecoration(
+                            color: AppColors.secondary,
+                            borderRadius: BorderRadius.circular(16)
+                          ),
+                          child: Text(
+                            "Tap to design your daily plan",
+                            style: TextStyle(
+                              color: AppColors.background,
+                              fontFamily: AppFonts.inter,
+                              fontSize: 18,
+                              fontWeight: FontWeight.w800
+                            ),
+                            textAlign: TextAlign.center,
+                          ),
+                        ),
+                      ),
+                    )
                   ],
                 )
               ],
